@@ -1,0 +1,45 @@
+Actividad 5
+
+Red: un conjunto de sistemas conectados.
+
+Modelo TCP/IP: protocolo de control de transmisión/ comunicación.
+
+IP:interfaz de internet
+
+PROTOCOLO TCP:control de transmisión, comunicacion cliente-servidor.
+
+Protocolo HTTP: comunicación que envia la informacion en texto seguro.
+
+Puerto del protocolo HTTP: 
+puerto del protocolo HTTPS:
+
+Diferencia entre HTTP Y HTTPS: texto plano/ texto cifrado.
+
+Modelo cliente/servidor: el cliente necesita o pide la comunicacion e informacion del servidor para poder tener conexión.
+
+
+¿Qué es una Request? nos da la información de la estructura del codigo y posibles vulnerabilidades.
+
+Response: nos brinda la información de respuesta de la modificación del codigo.
+
+Secciones de una petición: 
+
+Secciones de una respuesta: mensaje modificado.
+
+El codigo de respuesta 404 y 500 a que se refiere.
+
+404: el servidor no se encuentra disponible  la pagina o hay una falla de comunicación.
+
+505: no soporta la versión.
+
+lenguajes de programación Back End:
+Ruby, phyton.
+
+Front End.
+
+¿Qué es Burp Suite? no se.
+
+
+
+
+
