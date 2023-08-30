@@ -1,0 +1,31 @@
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls
+google-chrome-stable_current_amd64.deb
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo dpkg -i goog
+[sudo] password for kali: 
+sudo: a password is required
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo dpkg -i google-chrome-stable_current_amd64.deb 
+[sudo] password for kali: 
+Selecting previously unselected package google-chrome-stable.
+(Reading database ... 400646 files and directories currently installed.)
+Preparing to unpack google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (116.0.5845.140-1) ...
+dpkg: dependency problems prevent configuration of google-chrome-stable:
+ google-chrome-stable depends on libu2f-udev; however:
+  Package libu2f-udev is not installed.
+
+dpkg: error processing package google-chrome-stable (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for kali-menu (2023.4.3) ...
+Processing triggers for desktop-file-utils (0.26-1) ...
+Processing triggers for mailcap (3.70+nmu1) ...
+Processing triggers for man-db (2.11.2-3) ...
+Errors were encountered while processing:
+ google-chrome-stable
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Downloads]
+└─$ 
