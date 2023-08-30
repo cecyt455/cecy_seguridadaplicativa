@@ -1,0 +1,13 @@
+solo la suma
+num1 = int (input("ingrese numero: "))
+num2 = int (input("ingrese numero: "))
+
+sum = num1+ num1
+
+print("la suma es: ",sum)
+
+if (num1==num1):
+    print("la suma es: ",sum)
+
+else:
+    print("")
