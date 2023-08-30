@@ -1,0 +1,14 @@
+a=[8,9,10,6,6,7,8,9,5,6,7,6,8,8,9,9,5,6,7,9,10,7,8,9,9]
+
+def promedio(a):
+    media= sum(a) / len (a) 
+    return media
+
+    print(promedio(a))
+
+def reprobado(a):
+    conteo=0
+    for b in resultado:
+        if(b < 6):
+            conteo=conteo+1
+            print("reprobados: "+ str(conteo))
