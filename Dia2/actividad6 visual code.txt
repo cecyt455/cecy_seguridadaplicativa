@@ -1,0 +1,185 @@
+
+script5.sh
+mkdir /home/kali/Herramientas
+mkdir /home/kali/Herramientas/Deb
+mv /home/kali/Downloads/code_1.81.1-1691620686_amd64.deb /home/kali/Herramientas/Deb/
+mkdir bak
+cp /home/kali/Herramientas/Deb/code_1.81.1-1691620686_amd64.deb /home/kali/bak 
+sudo dpkg -i /home/kali/Herramientas/Deb/code_1.81.1-1691620686_amd64.deb 
+echo "Instalación exitosa"
+
+
+┌──(kali㉿kali)-[~]
+└─$ ls Downloads
+code_1.81.1-1691620686_amd64.deb  google-chrome-stable_current_amd64.deb
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ mkdir Herramientas
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls          
+1          Downloads    Herramientas  Public      script2.sh  Templates
+Desktop    ejemplo.txt  Music         script0.sh  script3.sh  Videos
+Documents  hera         Pictures      script1.sh  script4.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ cd Herramientas
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas]
+└─$ ls
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas]
+└─$ mkdir Deb         
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas]
+└─$ cd Deb         
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas/Deb]
+└─$ pwd
+/home/kali/Herramientas/Deb
+
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas/Deb]
+└─$ mv /home/kali/Downloads/code_1.81.1-1691620686_amd64.deb /home/kali/Herramientas/Deb/
+                                                                             
+┌──(kali㉿kali)-[~/Herramientas/Deb]
+└─$ ls
+code_1.81.1-1691620686_amd64.deb
+
+┌──(kali㉿kali)-[~/Herramientas/Deb]
+└─$ cd    
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nano script5.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ./script5.sh 
+zsh: permission denied: ./script5.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ chmod 744 script5.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ./script5.sh
+mkdir: cannot create directory ‘/home/kali/Herramientas’: File exists
+mkdir: cannot create directory ‘/home/kali/Herramientas/Deb’: File exists
+mv: cannot stat '/home/kali/Downloads/code_1.81.1-1691620686_amd64.deb': No such file or directory
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nano script5.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls
+1          Downloads    Herramientas  Public      script2.sh  script5.sh
+Desktop    ejemplo.txt  Music         script0.sh  script3.sh  Templates
+Documents  hera         Pictures      script1.sh  script4.sh  Videos
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ pwd
+/home/kali
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ mkdir bak
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ cp /home/kali/Herramientas/Deb/code_1.81.1-1691620686_amd64.deb /home/kali/bak              
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls
+1          Downloads     Music       script1.sh  script5.sh
+bak        ejemplo.txt   Pictures    script2.sh  Templates
+Desktop    hera          Public      script3.sh  Videos
+Documents  Herramientas  script0.sh  script4.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls bak      
+code_1.81.1-1691620686_amd64.deb
+                                  
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ sudo dpkg -i /home/kali/Herramientas/Deb/code_1.81.1-1691620686_amd64.deb 
+[sudo] password for kali: 
+(Reading database ... 400082 files and directories currently installed.)
+Preparing to unpack .../code_1.81.1-1691620686_amd64.deb ...
+Unpacking code (1.81.1-1691620686) over (1.81.1-1691620686) ...
+Setting up code (1.81.1-1691620686) ...
+Processing triggers for desktop-file-utils (0.26-1) ...
+Processing triggers for mailcap (3.70+nmu1) ...
+Processing triggers for shared-mime-info (2.2-1) ...
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo "Instalación exitosa"
+Instalación exitosa
+                                                        
+┌──(kali㉿kali)-[~]
+└─$ nano script5.sh
+                                                                                                                                                                       
+┌──(kali㉿kali)-[~]
+└─$ chmod 744 script5.sh                                                          
+                                                                                                                                                                       
+┌──(kali㉿kali)-[~]
+└─$ ls -la
+total 94360
+drwx------ 21 kali kali     4096 Sep  3 15:29 .
+drwxr-xr-x  6 root root     4096 Sep  3 01:46 ..
+-rw-r--r--  1 kali kali       16 Sep  2 16:45 1
+drwxr-xr-x  2 kali kali     4096 Sep  3 15:19 bak
+-rw-r--r--  1 kali kali      220 Aug 21 14:59 .bash_logout
+-rw-r--r--  1 kali kali     5551 Aug 21 14:59 .bashrc
+-rw-r--r--  1 kali kali     3526 Aug 21 14:59 .bashrc.original
+drwxr-xr-x 10 kali kali     4096 Sep  2 20:44 .cache
+drwxr-xr-x 13 kali kali     4096 Aug 31 23:17 .config
+drwxr-xr-x  4 kali kali     4096 Sep  2 21:42 Desktop
+-rw-r--r--  1 kali kali       35 Aug 31 08:21 .dmrc
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Documents
+drwxr-xr-x  3 kali kali     4096 Aug 31 23:24 .dotnet
+drwxr-xr-x  2 kali kali     4096 Sep  3 14:44 Downloads
+-rw-r--r--  1 kali kali        5 Sep  2 23:54 ejemplo.txt
+-rw-r--r--  1 kali kali    11759 Aug 21 14:59 .face
+lrwxrwxrwx  1 kali kali        5 Aug 21 14:59 .face.icon -> .face
+drwx------  3 kali kali     4096 Aug 31 08:21 .gnupg
+-rw-r--r--  1 kali kali 96329592 Sep  3 14:08 hera
+drwxr-xr-x  3 kali kali     4096 Sep  3 14:41 Herramientas
+-rw-------  1 kali kali        0 Aug 31 08:21 .ICEauthority
+drwxr-xr-x  3 kali kali     4096 Aug 21 14:59 .java
+drwxr-xr-x  4 kali kali     4096 Aug 31 08:21 .local
+drwx------  4 kali kali     4096 Aug 31 23:12 .mozilla
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Music
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Pictures
+drwx------  3 kali kali     4096 Aug 31 23:17 .pki
+-rw-r--r--  1 kali kali      807 Aug 21 14:59 .profile
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Public
+-rw-r--r--  1 root root       16 Sep  2 20:44 script0.sh
+-rwxr--r--  1 kali kali       17 Sep  2 21:46 script1.sh
+-rwxr--r--  1 kali kali       52 Sep  2 23:03 script2.sh
+-rw-------  1 root root    12288 Sep  3 01:41 .script2.sh.swp
+-rwx------  1 kali kali       86 Sep  3 02:30 script3.sh
+-rwxr--r--  1 root root      103 Sep  3 03:09 script4.sh
+-rwxr--r--  1 kali kali      345 Sep  3 15:29 script5.sh
+-rw-r--r--  1 kali kali        0 Aug 31 22:50 .sudo_as_admin_successful
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Templates
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-clipboard-tty7-control.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-clipboard-tty7-service.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-display-svga-x11-tty7-control.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-display-svga-x11-tty7-service.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-draganddrop-tty7-control.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-draganddrop-tty7-service.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-hostversion-tty7-control.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-seamless-tty7-control.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-seamless-tty7-service.pid
+-rw-r-----  1 kali kali        5 Sep  2 20:05 .vboxclient-vmsvga-session-tty7-control.pid
+drwxr-xr-x  2 kali kali     4096 Aug 31 08:21 Videos
+-rw-------  1 kali kali      804 Sep  2 21:16 .viminfo
+drwxr-xr-x  4 kali kali     4096 Aug 31 23:17 .vscode
+-rw-------  1 kali kali       49 Sep  2 20:05 .Xauthority
+-rw-------  1 kali kali    42279 Sep  3 14:39 .xsession-errors
+-rw-------  1 kali kali     9842 Sep  2 17:38 .xsession-errors.old
+-rw-------  1 kali kali     1155 Sep  3 14:39 .zsh_history
+-rw-r--r--  1 kali kali    10868 Aug 21 14:59 .zshrc
+                                                                                                                                                                       
+┌──(kali㉿kali)-[~]
+└─$ ls -la script5.sh
+-rwxr--r-- 1 kali kali 345 Sep  3 15:29 script5.sh
+                                                
+
+ 
