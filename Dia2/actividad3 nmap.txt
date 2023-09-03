@@ -1,0 +1,79 @@
+
+nano script3.sh= echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f2 | cut -d " " -f1)"
+
+
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nmap localhost 
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-09-03 00:11 EDT
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00020s latency).
+Other addresses for localhost (not scanned): ::1
+All 1000 scanned ports on localhost (127.0.0.1) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.09 seconds
+
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f6)"     
+Host activos:  (1
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ 
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f7)"
+Host activos:  host
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f5)" 
+Host activos:  address
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f6 | cut -b1)"
+Host activos:  (
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo "Host activos:  $(nmap localhost | tail -n1 | cut -d " " -f2 | cut -d " " -f2)"
+Host activos:  1
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$  
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nano script3.sh 
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo script3.sh
+script3.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ./script3.sh     
+zsh: permission denied: ./script3.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ chmod 700 script3.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ./script3.sh
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+Host activos:  1
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nano script3.sh
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ./script3.sh
+Host activos:  1
+
+                     
