@@ -1,0 +1,16 @@
+#calculadora.
+
+num1 = input("Ingresa el número: ")
+num2 = input("Ingresa el segundo número: ")
+res= int(num1) + int(num2)
+
+print("La suma es: ",res)
+
+res1= int(num1) - int(num2)
+print("La resta es: ",res1)
+
+res2= int(num1) * int(num2)
+print("La multiplicación es: ",res2)
+
+res3= int(num1) / int(num2)
+print("La divisón es: ",res3)
